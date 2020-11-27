@@ -1,0 +1,23 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: 01intro
+- file: 02calc
+- file: 03variable
+- file: 04control
+- file: 05function
+- file: 06list
+- file: 07immutable
+- file: 08tuple
+- file: 09str
+- file: 10dict
+- file: 11set
+- file: 12file
+- file: 13class
+- file: 16jupyter
+- file: 17numpy1
+- file: 18numpy2
+- file: 19plot
+#  sections:
+#    - file: markdown
+#    - file: notebooks
