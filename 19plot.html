@@ -57,6 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="行列・テンソル（NumPy その２）" href="18numpy2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="02calc.html">
    基本的な計算
@@ -155,6 +156,26 @@
    クラス
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16jupyter.html">
+   Jupyter (IPython) の便利機能
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17numpy1.html">
+   ベクトル（NumPy その１）
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18numpy2.html">
+   行列・テンソル（NumPy その２）
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   グラフの描画（Matplotlib）
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -197,7 +218,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/20plot.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/19plot.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -217,7 +238,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/nlp-titech/python/issues/new?title=Issue%20on%20page%20%2F20plot.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/nlp-titech/python/issues/new?title=Issue%20on%20page%20%2F19plot.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -238,7 +259,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/nlp-titech/python/main?urlpath=tree/docs/20plot.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/nlp-titech/python/main?urlpath=tree/docs/19plot.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -340,7 +361,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_5_0.png" src="_images/20plot_5_0.png" />
+<img alt="_images/19plot_5_0.png" src="_images/19plot_5_0.png" />
 </div>
 </div>
 <p>plot関数の第3引数に<code class="docutils literal notranslate"><span class="pre">'.'</span></code>を指定すると，データが点としてプロットされる．</p>
@@ -353,7 +374,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_7_0.png" src="_images/20plot_7_0.png" />
+<img alt="_images/19plot_7_0.png" src="_images/19plot_7_0.png" />
 </div>
 </div>
 <p>plot関数の第3引数に<code class="docutils literal notranslate"><span class="pre">'o-'</span></code>を指定すると，データが大きめの丸としてプロットされ，その間が線で結ばれる．</p>
@@ -366,7 +387,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_9_0.png" src="_images/20plot_9_0.png" />
+<img alt="_images/19plot_9_0.png" src="_images/19plot_9_0.png" />
 </div>
 </div>
 <p>色を赤（<code class="docutils literal notranslate"><span class="pre">r</span></code>），点を四角（<code class="docutils literal notranslate"><span class="pre">s</span></code>），線を破線（<code class="docutils literal notranslate"><span class="pre">--</span></code>）でプロットする例．</p>
@@ -379,7 +400,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_11_0.png" src="_images/20plot_11_0.png" />
+<img alt="_images/19plot_11_0.png" src="_images/19plot_11_0.png" />
 </div>
 </div>
 <p>最高気温（<code class="docutils literal notranslate"><span class="pre">h</span></code>）と最低気温（<code class="docutils literal notranslate"><span class="pre">l</span></code>）をひとつの領域にプロットする例．</p>
@@ -393,7 +414,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_13_0.png" src="_images/20plot_13_0.png" />
+<img alt="_images/19plot_13_0.png" src="_images/19plot_13_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html">subplots</a>関数の引数でグラフを２つのプロットエリアに縦に分割し，最高気温（<code class="docutils literal notranslate"><span class="pre">h</span></code>）と最低気温（<code class="docutils literal notranslate"><span class="pre">l</span></code>）をプロットする例．</p>
@@ -407,7 +428,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_15_0.png" src="_images/20plot_15_0.png" />
+<img alt="_images/19plot_15_0.png" src="_images/19plot_15_0.png" />
 </div>
 </div>
 <p>グラフを２つのプロットエリアに縦に分割したとき，<span class="math notranslate nohighlight">\(x\)</span>軸を共有する例．</p>
@@ -421,7 +442,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_17_0.png" src="_images/20plot_17_0.png" />
+<img alt="_images/19plot_17_0.png" src="_images/19plot_17_0.png" />
 </div>
 </div>
 <p>グラフを２つのプロットエリアに横に分割し，最高気温（<code class="docutils literal notranslate"><span class="pre">h</span></code>）と最低気温（<code class="docutils literal notranslate"><span class="pre">l</span></code>）をプロットする例．</p>
@@ -435,7 +456,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_19_0.png" src="_images/20plot_19_0.png" />
+<img alt="_images/19plot_19_0.png" src="_images/19plot_19_0.png" />
 </div>
 </div>
 <p>グラフを２つのプロットエリアに横に分割したとき，<span class="math notranslate nohighlight">\(y\)</span>軸を共有する例．</p>
@@ -449,7 +470,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_21_0.png" src="_images/20plot_21_0.png" />
+<img alt="_images/19plot_21_0.png" src="_images/19plot_21_0.png" />
 </div>
 </div>
 </div>
@@ -466,7 +487,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_24_0.png" src="_images/20plot_24_0.png" />
+<img alt="_images/19plot_24_0.png" src="_images/19plot_24_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_xlim.html#matplotlib.axes.Axes.set_xlim">set_xlim</a>関数と<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_ylim.html#matplotlib.axes.Axes.set_ylim">set_ylim</a>関数で，<span class="math notranslate nohighlight">\(x\)</span>軸と<span class="math notranslate nohighlight">\(y\)</span>軸の範囲を指定．</p>
@@ -482,7 +503,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_26_0.png" src="_images/20plot_26_0.png" />
+<img alt="_images/19plot_26_0.png" src="_images/19plot_26_0.png" />
 </div>
 </div>
 <p>plot関数のlabel引数と，<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend">legend</a>関数で凡例を表示（凡例の表示位置などは，legend関数の引数で制御できる）．</p>
@@ -497,7 +518,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_28_0.png" src="_images/20plot_28_0.png" />
+<img alt="_images/19plot_28_0.png" src="_images/19plot_28_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title">set_title</a>関数，<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel">set_xlabel</a>関数，<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel">set_ylabel</a>関数を用いて，グラフや軸のタイトルを表示．</p>
@@ -514,7 +535,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_30_0.png" src="_images/20plot_30_0.png" />
+<img alt="_images/19plot_30_0.png" src="_images/19plot_30_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.grid.html#matplotlib.axes.Axes.grid">grid</a>関数でグリッドを表示．</p>
@@ -529,7 +550,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_32_0.png" src="_images/20plot_32_0.png" />
+<img alt="_images/19plot_32_0.png" src="_images/19plot_32_0.png" />
 </div>
 </div>
 <p>全てを指定してグラフを完成させたバージョン（<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.set_ticks.html">xaxis.set_ticks</a>関数で<span class="math notranslate nohighlight">\(x\)</span>軸のグリッドの幅を設定しています）．</p>
@@ -551,7 +572,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_34_0.png" src="_images/20plot_34_0.png" />
+<img alt="_images/19plot_34_0.png" src="_images/19plot_34_0.png" />
 </div>
 </div>
 <p>グラフをファイルに保存する．</p>
@@ -577,7 +598,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_38_0.png" src="_images/20plot_38_0.png" />
+<img alt="_images/19plot_38_0.png" src="_images/19plot_38_0.png" />
 </div>
 </div>
 </div>
@@ -596,7 +617,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_41_0.png" src="_images/20plot_41_0.png" />
+<img alt="_images/19plot_41_0.png" src="_images/19plot_41_0.png" />
 </div>
 </div>
 <p><span class="math notranslate nohighlight">\(x\)</span>軸の値のラベルを指定し，月名を表示する．</p>
@@ -619,7 +640,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_44_0.png" src="_images/20plot_44_0.png" />
+<img alt="_images/19plot_44_0.png" src="_images/19plot_44_0.png" />
 </div>
 </div>
 <p>bar関数を繰り返し用い，積み上げ棒グラフを描画．</p>
@@ -637,7 +658,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_46_0.png" src="_images/20plot_46_0.png" />
+<img alt="_images/19plot_46_0.png" src="_images/19plot_46_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/3.3.2/api/_as_gen/matplotlib.axes.Axes.barh.html">barh</a>関数を用いて，水平方向の棒グラフを描画．以下のコードで<a class="reference external" href="https://matplotlib.org/3.3.2/api/_as_gen/matplotlib.axes.Axes.invert_yaxis.html">invert_yaxis</a>関数を呼び出さないと，月が下から上の方向に並ぶ．</p>
@@ -654,7 +675,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_48_0.png" src="_images/20plot_48_0.png" />
+<img alt="_images/19plot_48_0.png" src="_images/19plot_48_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -672,7 +693,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_49_0.png" src="_images/20plot_49_0.png" />
+<img alt="_images/19plot_49_0.png" src="_images/19plot_49_0.png" />
 </div>
 </div>
 </div>
@@ -697,7 +718,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_54_0.png" src="_images/20plot_54_0.png" />
+<img alt="_images/19plot_54_0.png" src="_images/19plot_54_0.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/3.3.2/api/_as_gen/matplotlib.patches.Wedge.html">patches.Wedge</a>クラスを用いて円弧（中心座標は<span class="math notranslate nohighlight">\((0,0)\)</span>，半径は<span class="math notranslate nohighlight">\(1\)</span>，角度の範囲は0度から90度，alpha引数で透明度を指定）を描き，グラフの上に重ねる．</p>
@@ -713,7 +734,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_56_0.png" src="_images/20plot_56_0.png" />
+<img alt="_images/19plot_56_0.png" src="_images/19plot_56_0.png" />
 </div>
 </div>
 </div>
@@ -772,7 +793,7 @@
   font.set_text(s, 0, flags=flags)
 </pre></div>
 </div>
-<img alt="_images/20plot_61_1.png" src="_images/20plot_61_1.png" />
+<img alt="_images/19plot_61_1.png" src="_images/19plot_61_1.png" />
 </div>
 </div>
 <p>この問題に対処するには，japanize-matplotlibモジュールをインストールし，japanize_matplotlibをインポートすればよい（モジュールをインポートするときに”-“が”_”に置き換わることに注意）</p>
@@ -816,7 +837,7 @@ Successfully installed japanize-matplotlib-1.1.3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/20plot_65_0.png" src="_images/20plot_65_0.png" />
+<img alt="_images/19plot_65_0.png" src="_images/19plot_65_0.png" />
 </div>
 </div>
 </div>
@@ -16625,6 +16646,7 @@ iIiUxAAjIiIlMcCIiEhJDDAiIlISA4yIiJTEACMiIiX9f+JiCgAaOnduAAAAAElFTkSuQmCC\
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="18numpy2.html" title="previous page">行列・テンソル（NumPy その２）</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
