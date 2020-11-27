@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupyter (IPython) の便利機能 &#8212; 俯瞰Python 3</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">俯瞰Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01intro.html">
+   Jupyter Notebook
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02calc.html">
+   基本的な計算
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03variable.html">
+   変数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04control.html">
+   実行制御
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05function.html">
+   関数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06list.html">
+   リスト
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07immutable.html">
+   可変と不変
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08tuple.html">
+   タプル
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09str.html">
+   文字列
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10dict.html">
+   辞書
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11set.html">
+   集合
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12file.html">
+   ファイルの入出力
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13class.html">
+   クラス
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/16jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/nlp-titech/python"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/nlp-titech/python/issues/new?title=Issue%20on%20page%20%2F16jupyter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/nlp-titech/python/main?urlpath=tree/docs/16jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   入力や出力の参照
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   シェルコマンドの実行
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   イントロスペクション
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   実行速度の計測
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   デバッグ
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter-ipython">
+<h1>Jupyter (IPython) の便利機能<a class="headerlink" href="#jupyter-ipython" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>入力や出力の参照<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">___</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0, 50, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;x + y&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>シェルコマンドの実行<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls *.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>prefecture.txt	 prefecture3.txt  requirements.txt
+prefecture2.txt  prefecture4.txt  tokyo-covid.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat prefecture.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>東京 とうきょう Tokyo
+神奈川 かながわ Kanagawa
+千葉 ちば Chiba
+埼玉 さいたま Saitama
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cut -f2 -d<span class="s2">&quot; &quot;</span> prefecture.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>とうきょう
+かながわ
+ちば
+さいたま
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yomi</span> <span class="o">=</span> <span class="o">!</span>cut -f2 -d<span class="s2">&quot; &quot;</span> prefecture.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yomi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;とうきょう&#39;, &#39;かながわ&#39;, &#39;ちば&#39;, &#39;さいたま&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>イントロスペクション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Docstring:</span>
+print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+
+Prints the values to a stream, or to sys.stdout by default.
+Optional keyword arguments:
+file:  a file-like object (stream); defaults to the current sys.stdout.
+sep:   string inserted between values, default a space.
+end:   string appended after the last value, default a newline.
+flush: whether to forcibly flush the stream.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>str.format<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Docstring:</span>
+S.format(*args, **kwargs) -&gt; str
+
+Return a formatted version of S, using substitutions from args and kwargs.
+The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+<span class=" -Color -Color-Red">Type:</span>      method_descriptor
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>実行速度の計測<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> sum(range(1000))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.1 µs ± 674 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> sum([x for x in range(1000)])
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.3 µs ± 1.01 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> sum(x for x in range(1000))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31 µs ± 298 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
+<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="n">i</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31.4 µs ± 288 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>デバッグ<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_upper</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="o">++</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_upper</span><span class="p">(</span><span class="s1">&#39;New York&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pdb</span> on
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Automatic pdb calling has been turned ON
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_upper</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">breakpoint</span><span class="p">()</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="o">++</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_upper</span><span class="p">(</span><span class="s1">&#39;New York&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">&lt;ipython-input-23-e2234f85ac9f&gt;</span>(3)<span class=" -Color -Color-Cyan">count_upper</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      1 def</span> count_upper<span class=" -Color -Color-Blue">(</span>s<span class=" -Color -Color-Blue">):</span>
+<span class=" -Color -Color-Green">      2 </span><span class=" -Color -Color-Red">    </span>breakpoint<span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">----&gt; 3 </span><span class=" -Color -Color-Red">    </span>n <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">      4 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">for</span> c <span class=" -Color -Color-Green">in</span> s<span class=" -Color -Color-Blue">:</span>
+<span class=" -Color -Color-Green">      5 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> c<span class=" -Color -Color-Blue">.</span>isupper<span class=" -Color -Color-Blue">():</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  n
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">&lt;ipython-input-23-e2234f85ac9f&gt;</span>(4)<span class=" -Color -Color-Cyan">count_upper</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      2 </span><span class=" -Color -Color-Red">    </span>breakpoint<span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      3 </span><span class=" -Color -Color-Red">    </span>n <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">----&gt; 4 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">for</span> c <span class=" -Color -Color-Green">in</span> s<span class=" -Color -Color-Blue">:</span>
+<span class=" -Color -Color-Green">      5 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> c<span class=" -Color -Color-Blue">.</span>isupper<span class=" -Color -Color-Blue">():</span>
+<span class=" -Color -Color-Green">      6 </span><span class=" -Color -Color-Red">            </span><span class=" -Color -Color-Blue">++</span>n
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  n
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">&lt;ipython-input-23-e2234f85ac9f&gt;</span>(5)<span class=" -Color -Color-Cyan">count_upper</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      3 </span><span class=" -Color -Color-Red">    </span>n <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">      4 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">for</span> c <span class=" -Color -Color-Green">in</span> s<span class=" -Color -Color-Blue">:</span>
+<span class=" -Color -Color-Green">----&gt; 5 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> c<span class=" -Color -Color-Blue">.</span>isupper<span class=" -Color -Color-Blue">():</span>
+<span class=" -Color -Color-Green">      6 </span><span class=" -Color -Color-Red">            </span><span class=" -Color -Color-Blue">++</span>n
+<span class=" -Color -Color-Green">      7 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">return</span> n
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  n
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">&lt;ipython-input-23-e2234f85ac9f&gt;</span>(6)<span class=" -Color -Color-Cyan">count_upper</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      3 </span><span class=" -Color -Color-Red">    </span>n <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">      4 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">for</span> c <span class=" -Color -Color-Green">in</span> s<span class=" -Color -Color-Blue">:</span>
+<span class=" -Color -Color-Green">      5 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> c<span class=" -Color -Color-Blue">.</span>isupper<span class=" -Color -Color-Blue">():</span>
+<span class=" -Color -Color-Green">----&gt; 6 </span><span class=" -Color -Color-Red">            </span><span class=" -Color -Color-Blue">++</span>n
+<span class=" -Color -Color-Green">      7 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">return</span> n
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  n
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">&lt;ipython-input-23-e2234f85ac9f&gt;</span>(4)<span class=" -Color -Color-Cyan">count_upper</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      2 </span><span class=" -Color -Color-Red">    </span>breakpoint<span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      3 </span><span class=" -Color -Color-Red">    </span>n <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">----&gt; 4 </span><span class=" -Color -Color-Red">    </span><span class=" -Color -Color-Green">for</span> c <span class=" -Color -Color-Green">in</span> s<span class=" -Color -Color-Blue">:</span>
+<span class=" -Color -Color-Green">      5 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> c<span class=" -Color -Color-Blue">.</span>isupper<span class=" -Color -Color-Blue">():</span>
+<span class=" -Color -Color-Green">      6 </span><span class=" -Color -Color-Red">            </span><span class=" -Color -Color-Blue">++</span>n
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  p n
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  quit
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">BdbQuit</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="n">ad74a7582071</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">count_upper</span><span class="p">(</span><span class="s1">&#39;New York&#39;</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-23-e2234f85ac9f&gt;</span> in <span class="ni">count_upper</span><span class="nt">(s)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">breakpoint</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="o">++</span><span class="n">n</span>
+
+<span class="nn">&lt;ipython-input-23-e2234f85ac9f&gt;</span> in <span class="ni">count_upper</span><span class="nt">(s)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">breakpoint</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="o">++</span><span class="n">n</span>
+
+<span class="nn">~/anaconda3/lib/python3.8/bdb.py</span> in <span class="ni">trace_dispatch</span><span class="nt">(self, frame, event, arg)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>             <span class="k">return</span> <span class="c1"># None</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_line</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;call&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_call</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+
+<span class="nn">~/anaconda3/lib/python3.8/bdb.py</span> in <span class="ni">dispatch_line</span><span class="nt">(self, frame)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_here</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">break_here</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span>             <span class="bp">self</span><span class="o">.</span><span class="n">user_line</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">quitting</span><span class="p">:</span> <span class="k">raise</span> <span class="n">BdbQuit</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_dispatch</span>
+<span class="g g-Whitespace">    </span><span class="mi">115</span> 
+
+<span class="ne">BdbQuit</span>: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; <span class=" -Color -Color-Green">/home/okazaki/anaconda3/lib/python3.8/bdb.py</span>(113)<span class=" -Color -Color-Cyan">dispatch_line</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">    111 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">if</span> self<span class=" -Color -Color-Blue">.</span>stop_here<span class=" -Color -Color-Blue">(</span>frame<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Green">or</span> self<span class=" -Color -Color-Blue">.</span>break_here<span class=" -Color -Color-Blue">(</span>frame<span class=" -Color -Color-Blue">):</span>
+<span class=" -Color -Color-Green">    112 </span><span class=" -Color -Color-Red">            </span>self<span class=" -Color -Color-Blue">.</span>user_line<span class=" -Color -Color-Blue">(</span>frame<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Green">--&gt; 113 </span><span class=" -Color -Color-Red">            </span><span class=" -Color -Color-Green">if</span> self<span class=" -Color -Color-Blue">.</span>quitting<span class=" -Color -Color-Blue">:</span> <span class=" -Color -Color-Green">raise</span> BdbQuit
+<span class=" -Color -Color-Green">    114 </span><span class=" -Color -Color-Red">        </span><span class=" -Color -Color-Green">return</span> self<span class=" -Color -Color-Blue">.</span>trace_dispatch
+<span class=" -Color -Color-Green">    115 </span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ipdb&gt;  quit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;New York&#39;</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Naoaki Okazaki<br/>
+        
+            &copy; Copyright 2020 (CC BY-NC-ND 4.0).<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

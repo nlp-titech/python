@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupyter Notebook &#8212; 俯瞰Python 3</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="基本的な計算" href="02calc.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">俯瞰Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="#">
+   Jupyter Notebook
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02calc.html">
+   基本的な計算
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03variable.html">
+   変数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04control.html">
+   実行制御
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05function.html">
+   関数
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06list.html">
+   リスト
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07immutable.html">
+   可変と不変
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08tuple.html">
+   タプル
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09str.html">
+   文字列
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10dict.html">
+   辞書
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11set.html">
+   集合
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12file.html">
+   ファイルの入出力
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13class.html">
+   クラス
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/01intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/nlp-titech/python"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/nlp-titech/python/issues/new?title=Issue%20on%20page%20%2F01intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/nlp-titech/python/main?urlpath=tree/docs/01intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Jupyter Notebookとは
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-colaboratory">
+   Google Colaboratory
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Google Colaboratoryを開始する
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     セルの操作
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     ノートブックの保存，ダウンロード，アップロード
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     無料版Google Colaboratoryの制限
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter">
+   自分のパソコンにJupyterをインストールする
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Pythonことはじめ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   参考資料
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter-notebook">
+<h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Jupyter Notebookとは<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://jupyter.org/">Jupyter</a> Notebookは，プログラムとその実行結果，<a class="reference external" href="https://ja.wikipedia.org/wiki/Markdown">Markdown</a>形式のドキュメント，<a class="reference external" href="https://ja.wikipedia.org/wiki/LaTeX">LaTeX</a>形式（<a class="reference external" href="https://www.mathjax.org/">MathJax</a>）の数式，図表などをまとめて記述・格納できるウェブアプリケーションである．データ分析や機械学習の実行過程の「ノート」をつける用途だけでなく，ブラウザ上でお手軽にプログラミングを体験する環境としても広く普及している．</p>
+<p>例えば，物理の解説とその実験を行うプログラム，その実行結果をまとめたノートを作ることができる．</p>
+<p><img alt="Jupyter Notebookの例" src="_images/jupyter-notebook2.png" /></p>
+<p>Jupyterの前身である<a class="reference external" href="https://ipython.org/notebook.html">IPython Notebook</a>は，<a class="reference external" href="https://www.python.org/">Python</a>のインタラクティブなシェルである<a class="reference external" href="https://ipython.org/">IPython</a>のプロジェクトとして開発が進められ，研究者や開発者から急速な支持を集めた．プログラミング言語に依存した部分（カーネルと呼ばれる）を分離し，Python以外の言語のサポートも進んだことから，IPython NotebookはJupyterプロジェクトにスピンオフされた．</p>
+</div>
+<div class="section" id="google-colaboratory">
+<h2>Google Colaboratory<a class="headerlink" href="#google-colaboratory" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a>はGoogleが提供するクラウド実行型のJupyter環境である．後述する制限はあるものの，Googleアカウントがあれば無料で利用できる．詳しくは，<a class="reference external" href="https://colab.research.google.com/notebooks/welcome.ipynb?hl=ja">Colaboratory へようこそ（公式ドキュメント）</a>を参照のこと．</p>
+<div class="section" id="id2">
+<h3>Google Colaboratoryを開始する<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Googleアカウントにログインしたブラウザで，<a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a> にアクセスすればよい．以下の画面で「ノートブックを新規作成」を選ぶ．</p>
+<p><img alt="新しいノートブックの作成" src="_images/colab-new.png" /></p>
+<p>すると，以下の画面のように新しいノートブックが作成される．</p>
+<p><img alt="新しく作成されたノートブック" src="_images/colab-clean.png" /></p>
+</div>
+<div class="section" id="id3">
+<h3>セルの操作<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>ノートブックはプログラムやテキストを記述する<strong>セル</strong>と呼ばれるブロックの集まりで構成されている．セルはプログラムを記述し，その実行結果を保持する<strong>コードセル</strong>と，文章を記述する<strong>テキストセル</strong>の2種類に大別される．新しく作成されたセルはコードセルとして動作する．</p>
+<p>Pythonのコードを実行するには，セルにプログラムを入力し，<code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code>キーを押す．すると，Googleのクラウドサーバ上でプログラムが実行され，その実行結果がブラウザに表示される．ここでは，以下のプログラムを入力・実行し，その出力が表示されている．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="コードを実行" src="_images/colab-code.png" /></p>
+<p>テキストセルを作成するには，「挿入」メニューからテキストセルを追加するか，いったん作成されたコードセルを選択して，<code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">m</span></code>を押す．</p>
+<p><img alt="テキストセルの挿入" src="_images/colab-insert-text.png" /></p>
+<p>テキストセルでは<a class="reference external" href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">Markdown記法</a>を用いることができるほか，LaTeX形式で数式を記述できる．</p>
+<p><img alt="テキストセルの編集" src="_images/colab-text.png" /></p>
+<p>セルの位置の移動や出力の消去などは，メニューから行える．その他，Google Colaboratoryで便利なキー操作を以下に挙げる．なお，このキー操作は「ツール」メニューの「キーボード ショートカット」から一覧を閲覧したり，キー割り当てを変更できる．</p>
+<ul class="simple">
+<li><p>カーソル（十字）キー: 選択セルを変更</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code>: 実行（コードセル），または確定（テキストセル）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">i</span></code>: 実行を中断</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">a</span></code>: 上にコードセルを追加</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">b</span></code>: 下にコードセルを追加</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">d</span></code>: セルを削除</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">y</span></code>: コードセルに変更</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">m</span></code>: テキストセルに変更</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">k</span></code>: セルを一つ上に移動</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">⌘/Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">m</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">j</span></code>: セルを一つ下に移動</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>ノートブックの保存，ダウンロード，アップロード<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>左上の名前（デフォルトでは”Untitled?.ipynb”となっている）の部分をクリックすることで，保存するファイル名を変更できる．</p>
+<p><img alt="ファイル名の変更" src="_images/colab-rename.png" /></p>
+<p>作成したノートブックは「ファイル」-&gt;「.ipynb をダウンロード」をクリックすることで，ダウンロードできる．保存されるファイルの拡張子は”.ipynb”である．</p>
+<p><img alt="ノートブックのダウンロード" src="_images/colab-save.png" /></p>
+<p>逆に，手元にある.ipynbファイルをアップロードして，Google Colaboratory上で閲覧したり，動かすこともできる．「ファイル」-&gt;「ノートブックをアップロード」をクリックし，以下の画面になったらアップロードしたいファイルをドラッグ・ドロップすればよい．</p>
+<p><img alt="ノートブックのアップロード" src="_images/colab-upload.png" /></p>
+</div>
+<div class="section" id="id5">
+<h3>無料版Google Colaboratoryの制限<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Google Colaboratoryで新しいノートブックを開くと，プログラムの実行環境であるインスタンスが立ち上がる．そのインスタンスは<strong>立ち上げから12時間で強制終了</strong>となる．また，Colaboratoryにアクセスしているブラウザを閉じるなど，インスタンスとのセッションが切れた状態が90分続いても，強制終了となる．ただ，ノートブックそのものはGoogle Drive上に保存され続けるので，新たにノートブックを開いてインスタンスを立ち上げ直せば，再度実行することができる．プログラミングや機械学習の勉強用途であれば，無料版のGoogle Colaboratoryで十分と思われる．</p>
+</div>
+</div>
+<div class="section" id="jupyter">
+<h2>自分のパソコンにJupyterをインストールする<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
+<p>Jupyterを自分のパソコンにインストールして動作させることもできる．この場合，Google Colaboratoryでノートブックを実行するときのような時間制限はない．Windows 10の場合，以下の2つの方法が現実的と思われる．</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/ja-jp/windows/wsl/about">Windows Subsystem for Linux (WSL)</a>上に<a class="reference external" href="https://ubuntu.com/">Ubuntu</a>をインストールし，さらに<a class="reference external" href="https://www.anaconda.com/products/individual">conda</a>をインストール</p></li>
+<li><p>Windows版の<a class="reference external" href="https://www.anaconda.com/">Anaconda</a>をインストールする</p></li>
+</ol>
+<p>1.はインストールに手間がかかるが，Linux環境上でJupyterを動作させることができる．ネット上の多くの解説はLinux系の環境を前提としているため，こちらの方が環境の違いで悩まされずに済む．2.はお手軽にインストールできるが，コードセルでWindowsのコマンドしか実行できず，ネット上の解説の通りにならないことがある．また，デフォルトの文字コードが UTF-8 ではなく，Shift_JIS (CP932) になることにも注意が必要である．</p>
+<p>自分のパソコンにJupyterをインストールした場合は，Jupyter Notebookの進化版であるJupyter Labを使うことができる．</p>
+<p><img alt="Jupyter Lab" src="_images/jupyter-lab.png" /></p>
+</div>
+<div class="section" id="python">
+<h2>Pythonことはじめ<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>文字列はシングルクォーテーション（<code class="docutils literal notranslate"><span class="pre">'</span></code>），またはダブルクォーテーション（<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>）で囲む．出力するには<code class="docutils literal notranslate"><span class="pre">print()</span></code>を用いる．改行文字<code class="docutils literal notranslate"><span class="pre">'\n'</span></code>を末尾に付けなくても改行される．</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jupyter Notebookなどの対話的シェルでは，最後に書かれた式を評価した結果が出力される．</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello, world!!!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, world!!!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">#</span></code>に続く記述はコメントとして扱われ，実行されない．</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;Hello, world!&#39;という文字列を表示する．</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>参考資料<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/ja/3/tutorial/">Pythonチュートリアル</a></p></li>
+<li><p><a class="reference external" href="http://diveintopython3-ja.rdy.jp/">Dive Into Python 3 日本語版</a></p></li>
+<li><p><a class="reference external" href="https://utokyo-ipp.github.io/index.html">Pythonプログラミング入門</a>（東京大学 数理・情報教育研究センター）</p></li>
+<li><p><a class="reference external" href="https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/245698/1/Version2020_02_13_01.pdf">プログラミング演習 Python 2019</a>（京都大学 国際高等教育院）</p></li>
+<li><p><a class="reference external" href="https://amorphous.tf.chiba-u.jp/lecture.files/chem_computer/index.html">コンピュータ処理</a>（千葉大学 共生応用化学科）</p></li>
+<li><p><a class="reference external" href="https://www.atmarkit.co.jp/ait/subtop/features/di/all.html#pythone585a5e99680">Python入門</a>（&#64;IT/Deep Insider）</p></li>
+<li><p><a class="reference external" href="https://www.atmarkit.co.jp/ait/series/15223/">機械学習＆ディープラーニング入門（作業環境準備編）</a>（&#64;IT/Deep Insider）</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="02calc.html" title="next page">基本的な計算</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Naoaki Okazaki<br/>
+        
+            &copy; Copyright 2020 (CC BY-NC-ND 4.0).<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
