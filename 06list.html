@@ -518,6 +518,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code>: 抽出を終了する要素のインデックス番号（ただし，<code class="docutils literal notranslate"><span class="pre">a[end]</span></code>の要素は含まれない）．省略された場合はリストの要素数となる．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>: 要素を抽出する間隔．省略された場合は<code class="docutils literal notranslate"><span class="pre">1</span></code>である．</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>開始位置と終了位置を指定したスライス．</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -526,7 +533,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 9, 16]
 </pre></div>
 </div>
 </div>
@@ -538,7 +545,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4]
 </pre></div>
 </div>
 </div>
@@ -551,7 +558,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4]
 </pre></div>
 </div>
 </div>
@@ -564,7 +571,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[25, 36, 49]
 </pre></div>
 </div>
 </div>
@@ -577,7 +584,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[25, 36, 49]
 </pre></div>
 </div>
 </div>
@@ -590,7 +597,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 25, 49]
 </pre></div>
 </div>
 </div>
@@ -603,7 +610,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[25, 16, 9]
 </pre></div>
 </div>
 </div>
@@ -616,7 +623,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[49, 36, 25, 16, 9, 4, 1, 0]
 </pre></div>
 </div>
 </div>
